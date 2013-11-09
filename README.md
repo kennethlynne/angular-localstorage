@@ -1,4 +1,4 @@
-angular-localstorage
+angular-localstorage [![Build Status](https://travis-ci.org/kennethlynne/angular-localstorage.png?branch=master)](https://travis-ci.org/kennethlynne/angular-localstorage)
 ====================
 
 Yet another local storage service for Angular.
