@@ -2,11 +2,10 @@ angular-localstorage
 ====================
 
 Yet another local storage service for Angular.
-This service abstracts local storage, and lets the user handle data in collections rather than plain key value. This enforces proper namespacing.
-It handles serialization and deserialization of objects.
+This service abstracts local storage. It lets the user handle data in collections rather than plain key value pairs and handles serialization and deserialization of objects.
 
 TODO: 
-* Expand readme
+* Rename repo to avoid collisions
 * Set up demo page using GitHub pages
 * Implement fallback to cookies if browser does not support local storage
 
