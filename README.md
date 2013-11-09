@@ -10,7 +10,10 @@ TODO:
 * Set up demo page using GitHub pages
 * Implement fallback to cookies if browser does not support local storage
 
-Example use: 
+##Usage
+
+* ```bower install https://github.com/kennethlynne/angular-localstorage.git```
+* Add ```KLLocalStorage``` as a dependancy to your app module.
 
 ```javascript
 angular.module('yourModule', ['KLLocalStorage'])
