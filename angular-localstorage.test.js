@@ -8,7 +8,7 @@ describe('Service: localStorage', function () {
 
         localStorageMemory = {};
 
-        var window = {
+        window = {
 
             localStorage: {
 
@@ -22,7 +22,7 @@ describe('Service: localStorage', function () {
             }
         };
 
-        module('KLLocalStorage', function ($provide) {
+        module('socklessJS.services.localStorage', function ($provide) {
             $provide.value('$window', window);
         });
 
