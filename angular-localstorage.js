@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('KLLocalStorage', [])
+angular.module('socklessJS.services.localStorage', [])
     .service('localStorage', function ($window) {
 
         //TODO: Should use $cookies (ngCookies) to persist state if not browser supports local storage

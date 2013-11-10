@@ -12,10 +12,10 @@ TODO:
 ##Usage
 
 * ```bower install https://github.com/kennethlynne/angular-localstorage.git```
-* Add ```KLLocalStorage``` as a dependancy to your app module.
+* Add ```socklessJS.services.localStorage``` as a dependancy to your app module.
 
 ```javascript
-angular.module('yourModule', ['KLLocalStorage'])
+angular.module('yourModule', ['socklessJS.services.localStorage'])
 	.controller('yourCtrl', function($scope, localStorage) {
 
 		localStorage.collection('settings')
