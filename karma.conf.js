@@ -13,7 +13,7 @@ module.exports = function(config) {
     files: [
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
-        'angular-localstorage.js',
+        'angular-localstorage.min.js',
         'angular-localstorage.test.js'
     ],
 
