@@ -2,7 +2,7 @@
 
 describe('Service: localStorage', function () {
 
-    var localStorage, window, localStorageMemory;
+    var localStorage, window, localStorageMemory, $cookies;
 
     beforeEach(function() {
 
@@ -18,12 +18,19 @@ describe('Service: localStorage', function () {
 
                 getItem: function (key) {
                     return localStorageMemory[key];
+                },
+
+                removeItem: function (key) {
+                    delete localStorageMemory[key];
                 }
             }
         };
 
-        module('socklessJS.services.localStorage', function ($provide) {
+        $cookies = {};
+
+        module('kennethlynne.angular-localstorage', function ($provide) {
             $provide.value('$window', window);
+            $provide.value('$cookies', $cookies);
         });
 
         inject(function(_localStorage_) {
@@ -37,6 +44,10 @@ describe('Service: localStorage', function () {
 
     it('should expose a collection API', function() {
         expect(typeof localStorage.collection).toBe('function');
+    });
+
+    it('should use local storage when available', function() {
+        expect(localStorage.mode()).toBe('localStorage');
     });
 
     it('should throw an error if collection name is not specified', function() {
@@ -78,5 +89,24 @@ describe('Service: localStorage', function () {
         localStorage.collection('collection').set('key', src);
 
         expect(localStorageMemory.collection).toEqual(jsonData);
+    });
+
+    it('should use $cookies if browser does not support local storage', function() {
+        delete window.localStorage;
+        expect(localStorage.mode()).toBe('cookies');
+    });
+
+    it('should set data with the same API if browser does not support local storage', function() {
+        delete window.localStorage;
+        var obj = {data: 'text'};
+        localStorage.collection('settings').set('key',obj);
+        expect($cookies.settings).toEqual(angular.toJson({key:obj}));
+    });
+
+    it('should get data with the same API if browser does not support local storage', function() {
+        delete window.localStorage;
+        var obj = {data: 'text'};
+        $cookies.settings = angular.toJson({key:obj});
+        expect(localStorage.collection('settings').get('key')).toEqual(obj);
     });
 });

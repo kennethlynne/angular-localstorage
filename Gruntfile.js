@@ -6,26 +6,36 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON('bower.json'),
         karma: {
             unit: {
                 configFile: 'karma.conf.js',
-                singleRun: true
+                singleRun: true,
+                options: {
+                    files: [
+                        'bower_components/angular/angular.js',
+                        'bower_components/angular-mocks/angular-mocks.js',
+                        'bower_components/angular-cookies/angular-cookies.js',
+                        '<%= pkg.name %>.min.js',
+                        '<%= pkg.name %>.test.js'
+                    ]
+                }
             }
         },
         ngmin: {
             dist: {
                 files: [{
                     cwd: './',
-                    src: 'angular-localstorage.js',
-                    dest: 'angular-localstorage.min.js'
+                    src: '<%= pkg.name %>.js',
+                    dest: '<%= pkg.name %>.min.js'
                 }]
             }
         },
         uglify: {
             dist: {
                 files: {
-                    'angular-localstorage.min.js': [
-                        'angular-localstorage.min.js'
+                    '<%= pkg.name %>.min.js': [
+                        '<%= pkg.name %>.min.js'
                     ]
                 }
             }

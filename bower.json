@@ -1,28 +1,32 @@
 {
-    "name": "angular-localstorage",
-    "version": "0.0.0",
-    "homepage": "https://github.com/kennethlynne/angular-component-factory",
-    "authors": [
-        "Kenneth Lynne <kenneth.lynne@gmail.com>"
-    ],
-    "description": "AngularJS service to simplify use of localstorage",
-    "main": "angular-localstorage.js",
-    "dependencies": {
-        "angular": "~1.2.0"
-    },
-    "devDependencies": {
-        "angular-mocks": "~1.2.0"
-    },
-    "keywords": [
-        "angularjs",
-        "service"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ]
+  "name": "kennethlynne.angular-localstorage",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kennethlynne/angular-localstorage",
+  "authors": [
+    "Kenneth Lynne <kenneth.lynne@gmail.com>"
+  ],
+  "description": "AngularJS service to simplify use of localstorage",
+  "main": "angular-localstorage.js",
+  "dependencies": {
+    "angular": "~1.2.3",
+    "angular-cookies": "~1.2.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.3"
+  },
+  "keywords": [
+    "angularjs",
+    "service"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": "~1.2.3"
+  }
 }
