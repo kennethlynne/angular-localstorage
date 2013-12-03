@@ -19,9 +19,9 @@ angular.module('yourModule', ['kennethlynne.angular-localstorage'])
 		localStorage.collection('settings')
 			.set('message',{text: 'Hello world'}); //It supports objects
 		
-		var messageObject = localStorage.collection('settings').get('message');
+		var message = localStorage.collection('settings').get('message');
 		
-		alert(messageObject.text); //Alerts "Hello world"
+		alert(message.text); //Alerts "Hello world"
 		
 	});
 ```
