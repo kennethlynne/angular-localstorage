@@ -1,4 +1,4 @@
-kennethlynne.angular-localstorage [![Build Status](https://travis-ci.org/kennethlynne/angular-localstorage.png?branch=master)](https://travis-ci.org/kennethlynne/angular-localstorage)
+kennethlynne.angular-localstorage [![Build Status](https://travis-ci.org/kennethlynne/angular-localstorage.png?branch=master)](https://travis-ci.org/kennethlynne/angular-localstorage) [![Code Climate](https://codeclimate.com/repos/52c126e46956804e75002b3c/badges/45bff5a1e5d95ec7452a/gpa.png)](https://codeclimate.com/repos/52c126e46956804e75002b3c/feed)
 ====================
 
 Yet another local storage service for Angular. It supports fallback to cookies, and is tested.
